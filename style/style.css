@@ -1,9 +1,59 @@
-*{
-    /* background-attachment: fixed; */
+/* General */
+.container{
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    background-color: blueviolet;
 }
 
+hr{
+    border: 0;
+    height: 1px;
+    background: blue;
+    background-image: linear-gradient(to right, #ccc,blue,#ccc);
+}
+/* Header */
+header {
+    display: flex;
+    flex-direction: row;   
+    align-items: center;
+}
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    /* align-items: flex-end;    */
+    height: 30vh;
+}
 
+.logo{
+    display: flex;
+    align-items: flex-end;   
+}
+
+.logo img {
+    display: flex;
+    max-height:80vh;
+    max-width: 50vw;
+}
+.links{
+    /* height: 10%; */
+    display: flex;
+    /* align-items: flex-end; */
+    align-items: center;
+}
+
+header a
+{
+    padding: 10px;
+    display: flex;
+    text-decoration: none;
+}
+
+/* Main */
 
 /* media query */
+
+/* min-width 768px */
 
