@@ -1,13 +1,16 @@
 /* General */
 .container{
     display: flex;
+    /* display: grid; */
     flex-direction: column;
     background-attachment: fixed;
-    background-color: blueviolet;
+    justify-items: center;
+    /* background-color: blueviolet; */
 }
-
-hr{
-    border: 0;
+.container hr{
+    display: flex;
+    margin: 0px;
+    border: 1px;
     height: 1px;
     background: blue;
     background-image: linear-gradient(to right, #ccc,blue,#ccc);
@@ -23,8 +26,10 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    /* align-items: flex-end;    */
+    align-items: flex-end;   
     height: 30vh;
+    width: 100vw;
+    padding: 10px 0 0 10px;
 }
 
 .logo{
@@ -41,6 +46,7 @@ nav {
     /* height: 10%; */
     display: flex;
     /* align-items: flex-end; */
+    padding: 0 0 10px 0;
     align-items: center;
 }
 
@@ -52,6 +58,45 @@ header a
 }
 
 /* Main */
+ .comtainer >  main{
+     background: #0E7fff;
+    justify-items: center;
+} 
+main{
+    display: grid;
+    height: 50vh;
+    width: 90vw;
+    grid-template-columns: 500px 10px 500px;
+    /* grid-row: 1px 30px 1px; */
+    grid-row: auto;
+    justify-items: center;
+}
+.v1{
+    display: flex;
+    border-left: 2px solid blue;
+    height: auto;
+    width: 2px;
+    margin: 5px
+}
+.cta{
+    /* display: flex; */
+    display: grid;
+    margin: auto;
+    height: 75%;
+    width: 75%;
+    padding: 40px 0 0 0;
+    background-color: #0E7fff;
+    border-radius: 10%;
+    justify-content: center;
+    text-align: center;
+}
+
+.cta h3{
+    /* vertical-align: middle; */
+    display: inline-block;
+    vertical-align: middle;
+
+}
 
 /* media query */
 
