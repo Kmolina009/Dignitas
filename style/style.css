@@ -1,5 +1,7 @@
 /* General */
+
 .container{
+    --main-color : #4472c4;
     display: flex;
     /* display: grid; */
     flex-direction: column;
@@ -85,7 +87,7 @@ main{
     height: 75%;
     width: 75%;
     padding: 40px 0 0 0;
-    background-color: #0E7fff;
+    background-color: var(--main-color);
     border-radius: 10%;
     justify-content: center;
     text-align: center;
@@ -95,10 +97,70 @@ main{
     /* vertical-align: middle; */
     display: inline-block;
     vertical-align: middle;
+    color: white;
 
 }
 
+/* Application */
+.applications {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    align-self: center;
+}
+.form{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+
+}
+
+.school-links{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+    padding : 10px;
+}
+
+.school-links div{
+    display: flex;
+    justify-content: space-around;
+    padding : 10px;
+}
+
+.programs{
+ display: flex;
+}
+/* Yes I know I can use bootstrap, but I like having to build these things*/
+.btn-control{
+    display: flex;
+    flex-direction: row;
+    padding:10px;
+    height: 40%;
+    width: 6vh;
+}
+.btn{
+    display: block;
+    border-radius: 5px;
+    padding:  5px 13px;
+    background-color: var(--main-color);
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
 /* media query */
 
 /* min-width 768px */
 
+
+/* Future Notes
+Style the hr's so they closely match the what's in the wireframe
+center grid items
+Experiment with the color, including the background,(More modern design, versus conservative versus pedagogical ?)
+Monochromatic color scheme
+*/
