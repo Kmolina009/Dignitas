@@ -14,6 +14,7 @@
     margin: 0px;
     border: 1px;
     height: 1px;
+    width: fit-content;
     background: blue;
     background-image: linear-gradient(to right, #ccc,blue,#ccc);
 }
@@ -72,6 +73,7 @@ main{
     /* grid-row: 1px 30px 1px; */
     grid-row: auto;
     justify-items: center;
+    padding: 5vh;
 }
 .v1{
     display: flex;
@@ -86,6 +88,7 @@ main{
     margin: auto;
     height: 75%;
     width: 75%;
+    margin: 10px 10px ;
     padding: 40px 0 0 0;
     background-color: var(--main-color);
     border-radius: 10%;
@@ -108,9 +111,14 @@ main{
     text-align: center;
     align-self: center;
 }
+.applications h3 {
+    margin: 0 0 0 5px;
+}
 .form{
     display: flex;
     justify-content: space-around;
+    height: 40vh;
+    width: 100%;
     flex-direction: column;
     border-radius: 10px;
     padding: 10px;
@@ -120,36 +128,50 @@ main{
 
 .school-links{
     display: flex;
+    /* flex-direction: column; */
     flex-direction: row;
     /* justify-content: space-around; */
     padding : 10px;
+
 }
 
 .school-links div{
     display: flex;
+    /* flex-direction: row; */
     justify-content: space-around;
     padding : 10px;
 }
 
 .programs{
  display: flex;
+ flex-direction: row;
 }
 /* Yes I know I can use bootstrap, but I like having to build these things*/
-.btn-control{
+/* .btn-control{
     display: flex;
     flex-direction: row;
     padding:10px;
     height: 40%;
     width: 6vh;
-}
+} */
 .btn{
-    display: block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex-grow: inherit;
+    /* display: table-cell; */
     border-radius: 5px;
     padding:  5px 13px;
+    margin:  5px 13px;
+    height: fit-content;
+    width: fit-content;
+    /* width: 100%; */
+    min-width: 0;
     background-color: var(--main-color);
 }
 
 .btn a{
+    display: flex;
     color: white;
     text-decoration: none;
 }
