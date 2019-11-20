@@ -1,5 +1,6 @@
 /* General */
-
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Signika+Negative&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alata&display=swap');
 .container{
     --main-color : #4472c4;
     display: flex;
@@ -14,9 +15,12 @@
     margin: 0px;
     border: 1px;
     height: 1px;
-    width: fit-content;
+    /* width: fit-content; */
     background: blue;
     background-image: linear-gradient(to right, #ccc,blue,#ccc);
+}
+.comtainer main{
+    justify-content: space-evenly;
 }
 /* Header */
 header {
@@ -29,7 +33,9 @@ nav {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: flex-end;   
+    align-items: flex-end;
+    font-family: 'Alata', sans-serif;
+    font-family: 'Libre Baskerville', serif;
     height: 30vh;
     width: 100vw;
     padding: 10px 0 0 10px;
@@ -48,8 +54,10 @@ nav {
 .links{
     /* height: 10%; */
     display: flex;
+    font-size: 150%;
     /* align-items: flex-end; */
-    padding: 0 0 10px 0;
+    padding: 0 100px 10px 0;
+    margin: inherit 40px;
     align-items: center;
 }
 
@@ -69,26 +77,34 @@ main{
     display: grid;
     height: 50vh;
     width: 90vw;
-    grid-template-columns: 500px 10px 500px;
+    /* grid-template-columns: 500px 10px 500px; */
+    /* The below solution is a better(centered and responsive) */
+    grid-template-columns: 50vw 10px 50vw;
     /* grid-row: 1px 30px 1px; */
     grid-row: auto;
     justify-items: center;
     padding: 5vh;
+    /* font-family: 'Signika Negative', sans-serif; */
+    font-family: 'Open-sans', sans-serif;
 }
 .v1{
+    content: '';
     display: flex;
-    border-left: 2px solid blue;
+    /* border-left: 2px solid blue; */
     height: auto;
     width: 2px;
-    margin: 5px
+    margin: 5px;
+    background-image: linear-gradient(to right, #ccc,blue,#ccc, 75%, transparent);
+    
+    /* background: blue; */
 }
 .cta{
     /* display: flex; */
     display: grid;
     margin: auto;
-    height: 75%;
-    width: 75%;
-    margin: 10px 10px ;
+    height: 70%;
+    width: 70%;
+    /* margin: 10px  ; */
     padding: 40px 0 0 0;
     background-color: var(--main-color);
     border-radius: 10%;
@@ -101,7 +117,8 @@ main{
     display: inline-block;
     vertical-align: middle;
     color: white;
-
+    font-size: 3vw;
+    
 }
 
 /* Application */
@@ -123,16 +140,16 @@ main{
     border-radius: 10px;
     padding: 10px;
     border: 1px solid var(--main-color);
-
+    
 }
 
 .school-links{
     display: flex;
     /* flex-direction: column; */
     flex-direction: row;
-    /* justify-content: space-around; */
+    justify-content: space-between;
     padding : 10px;
-
+    
 }
 
 .school-links div{
@@ -143,8 +160,8 @@ main{
 }
 
 .programs{
- display: flex;
- flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 /* Yes I know I can use bootstrap, but I like having to build these things*/
 /* .btn-control{
@@ -171,9 +188,11 @@ main{
 }
 
 .btn a{
+    padding: 0 5px;
     display: flex;
     color: white;
     text-decoration: none;
+    font-family: 'Alata', sans-serif;
 }
 /* media query */
 
