@@ -197,8 +197,16 @@ main{
 /* media query */
 
 /* min-width 768px */
-
-
+@media only screen and (max-width: 414px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+}
 /* Future Notes
 Style the hr's so they closely match the what's in the wireframe
 center grid items
