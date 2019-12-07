@@ -12,7 +12,7 @@
 }
 .container hr{
     display: flex;
-    margin: 0px;
+    margin: 20px;
     border: 1px;
     height: 1px;
     /* width: fit-content; */
@@ -77,13 +77,13 @@ main{
     display: grid;
     height: 50vh;
     width: 90vw;
-    /* grid-template-columns: 500px 10px 500px; */
-    /* The below solution is a better(centered and responsive) */
+   /* The below solution is a better(centered and responsive) */
     grid-template-columns: 50vw 10px 50vw;
     /* grid-row: 1px 30px 1px; */
     grid-row: auto;
     justify-items: center;
-    padding: 5vh;
+    padding: 5vh 0vh;
+    margin: 0px 35px 35px 0px;
     /* font-family: 'Signika Negative', sans-serif; */
     font-family: 'Open-sans', sans-serif;
 }
@@ -117,14 +117,16 @@ main{
     display: inline-block;
     vertical-align: middle;
     color: white;
-    font-size: 3vw;
+    /* padding:5px 10px; */
+    font-size: 100%;
+
     
 }
 
 /* Application */
 .applications {
     display: block;
-    margin: 0 auto;
+    margin: 10px auto 10px;
     text-align: center;
     align-self: center;
 }
@@ -195,9 +197,69 @@ main{
     font-family: 'Alata', sans-serif;
 }
 /* media query */
-
+/* Iphone 6/7/8 */
+@media only screen and (max-width: 375px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        display: flex;
+        height: fit-content;
+        width: 80vw;
+    }
+}
+@media only screen and (max-width: 667px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+    h3{
+        padding: 20px;
+    }
+    hr{
+        margin:10px;
+    }
+    .form{
+        display: flex;
+        height: auto;
+        width: 80vw;
+    }
+}
+/* Iphone 6/7/8 Plus */
 /* min-width 768px */
 @media only screen and (max-width: 414px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    hr{
+        display: flex;
+        justify-content: center;
+    }
+        main{
+            display: flex;
+            flex-direction: column;
+        }
+        .applications{
+            margin: 0 auto;
+        }
+        .form{
+            width: 83vw;
+        }
+    }
+
+
+@media only screen and (max-width: 736px) {
     .container{
         display: flex;
         flex-direction: column;
