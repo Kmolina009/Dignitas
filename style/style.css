@@ -63,8 +63,8 @@ nav {
 
 header a
 {
-    padding: 10px;
     display: flex;
+    padding: 0px 10px;
     text-decoration: none;
 }
 
@@ -78,7 +78,9 @@ main{
     height: 50vh;
     width: 90vw;
    /* The below solution is a better(centered and responsive) */
-    grid-template-columns: 50vw 10px 50vw;
+    grid-template-columns: 45vw 10px 45vw;
+    grid-template-rows: 50vh 100px;
+    /* grid-template-rows: auto; */
     /* grid-row: 1px 30px 1px; */
     grid-row: auto;
     justify-items: center;
@@ -91,7 +93,7 @@ main{
     content: '';
     display: flex;
     /* border-left: 2px solid blue; */
-    height: auto;
+    height: 55vh;
     width: 2px;
     margin: 5px;
     background-image: linear-gradient(to right, #ccc,blue,#ccc, 75%, transparent);
@@ -199,10 +201,29 @@ main{
 /* media query */
 /* Iphone 6/7/8 */
 @media only screen and (max-width: 375px) {
+    header{
+        width: fit-content;
+    }
     .container{
         display: flex;
         flex-direction: column;
+        width: 100vw;
+        height: fit-content;
     }
+    .logo{
+        margin: 0 auto;
+    }
+    .links{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+        font-size: 10px;
+    }
+    nav{
+        height: auto;
+        padding: 10px 0px;
+    }
+    
     main{
         display: flex;
         flex-direction: column;
@@ -217,6 +238,7 @@ main{
     .container{
         display: flex;
         flex-direction: column;
+        justify-content: center;
     }
     main{
         display: flex;
@@ -226,6 +248,9 @@ main{
         padding: 20px;
     }
     hr{
+        display: flex;
+        flex-direction: column;
+        /* width: fit-content; */
         margin:10px;
     }
     .form{
@@ -237,14 +262,32 @@ main{
 /* Iphone 6/7/8 Plus */
 /* min-width 768px */
 @media only screen and (max-width: 414px) {
+    main{
+        height: auto;
+    }
     .container{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
+    nav{
+        height: auto;
+    }
+    nav figure {
+        margin: 10px 10px 0px 0px;
+    
+    }
     hr{
         display: flex;
         justify-content: center;
+    }
+    .links{
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+        font-size: 10px;
+        height: 5vh;
+        width: auto;
     }
         main{
             display: flex;
@@ -254,6 +297,8 @@ main{
             margin: 0 auto;
         }
         .form{
+            display: flex;
+            margin: 0 auto;
             width: 83vw;
         }
     }
@@ -268,6 +313,7 @@ main{
         display: flex;
         flex-direction: column;
     }
+    
 }
 /* Future Notes
 Style the hr's so they closely match the what's in the wireframe
