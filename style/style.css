@@ -7,6 +7,7 @@ html{
 
 .container{
     --main-color : #4472c4;
+    --btn-hover :#85a8e6ad;
     display: flex;
     /* display: grid; */
     flex-direction: column;
@@ -41,7 +42,7 @@ nav {
     font-family: 'Alata', sans-serif;
     font-family: 'Libre Baskerville', serif;
     height: 30vh;
-    width: 100vw;
+    width: 98vw;
     padding: 10px 0 0 10px;
 }
 
@@ -55,16 +56,54 @@ nav {
     max-height:60vh;
     max-width: 50vw;
 }
+.dropdown{
+    position: relative;
+    display: inline-block;
+    float:right;
+    overflow: visible;
+    /* cursor: pointer; */
+}
+.menu-btn{
+    display: inline-block;
+    width: auto;
+    margin: 0;
+}
+nav figure{
+    margin: 0 auto;
+}
 .links{
-    /* height: 10%; */
-    display: flex;
+    /* display: flex; */
+    /* display: inline-block; */
+    display: none;
+    position: absolute;
+    right:0;
     font-size: 150%;
-    /* align-items: flex-end; */
-    padding: 0 100px 10px 0;
-    margin: inherit 40px;
-    align-items: center;
+    font-family: 'Alata', sans-serif;
+    background-color: var(--main-color);
+    opacity: 96%;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px 40px 0px 0px;
+    align-items: rigth;
+    overflow: auto;
+    filter:drop-shadow(10px 10px 10px rgb(42, 38, 50))
+    /* z-index: 1; */
+}
+/* Look into  IE's soultion to a drop shadow */
+
+/* .links > a{
+    opacity: 95%;
+} */
+.links a:hover{
+    background-color:var(--btn-hover);
+    border-radius: 10px;
+    cursor:pointer;
 }
 
+.show{
+    display: inline-block;
+    position: absolute;
+}
 header a
 {
     display: flex;
@@ -191,6 +230,7 @@ main > .applications{
     padding : 10px;
 }
 
+
 .programs{
     display: flex;
     flex-direction: row;
@@ -218,6 +258,10 @@ main > .applications{
     min-width: 0;
     background-color: var(--main-color);
 }
+btn:hover{
+    background-color:var(--btn-hover)
+
+}
 
 .btn a{
     padding: 0 5px;
@@ -241,8 +285,16 @@ main > .applications{
     .logo{
         margin: 0 auto;
     }
+    .menu-btn{
+        display: inline-block;
+        width: auto;
+        margin: 0 auto;
+    }
+    nav figure{
+        margin: 0 auto;
+    }
     .links{
-        display: flex;
+        display: none;
         justify-content: space-evenly;
         padding: 5px;
         font-size: 10px;
@@ -400,4 +452,6 @@ Experiment with the color, including the background,(More modern design, versus 
 Monochromatic color scheme
 */
 
+/* Figure out how to move the menu items under the btn */
 
+/* Fix header to page(stays on scroll) */
