@@ -24,16 +24,40 @@ html{
     background: blue;
     background-image: linear-gradient(to right, #ccc,blue,#ccc);
 }
+
 .comtainer main{
     justify-content: space-evenly;
+}
+
+.edu-article hr{
+    display: flex;
+    margin: 2px 2px 10px 2px;
+    border: 1px;
+    height: 1px;
+    /* width: fit-content; */
+    background:blue;
+    background-image: linear-gradient(to right, blue,#ccc);
+}
+.edu-article h2{
+    margin: 20px 0px 1px 10px;
 }
 /* Header */
 header {
     display: flex;
+    background-color: white;
     flex-direction: row;   
     align-items: center;
 }
 
+header hr{
+    display: flex;
+    margin: 20px;
+    border: 1px;
+    height: 1px;
+    /* width: fit-content; */
+    background: blue;
+    background-image: linear-gradient(to right, #ccc,blue,#ccc);
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -56,11 +80,21 @@ nav {
     max-height:60vh;
     max-width: 50vw;
 }
-.dropdown{
+/* .dropdown{
+    margin-right:  3vw;
     position: relative;
     display: inline-block;
     float:right;
     overflow: visible;
+    /* cursor: pointer; */
+/* } */
+.dropdown{
+    margin-right:  3vw;
+    position: relative;
+    display: inline-block;
+    float:right;
+    overflow: visible;
+    /* background-color: var(--main-color); */
     /* cursor: pointer; */
 }
 .menu-btn{
@@ -77,16 +111,17 @@ nav figure{
     display: none;
     position: absolute;
     right:0;
+    background-color: var(--main-color);
     font-size: 150%;
     font-family: 'Alata', sans-serif;
-    background-color: var(--main-color);
     opacity: 96%;
     border-radius: 10px;
     padding: 5px;
     margin: 0px 40px 0px 0px;
     align-items: rigth;
     overflow: auto;
-    filter:drop-shadow(10px 10px 10px rgb(42, 38, 50))
+    /* filter:drop-shadow(10px 10px 10px rgb(42, 38, 50)) */
+    box-shadow:0px 8px 10px 0px rgba(0, 0, 0,0.4)
     /* z-index: 1; */
 }
 /* Look into  IE's soultion to a drop shadow */
@@ -111,6 +146,14 @@ header a
     text-decoration: none;
 }
 
+.sticky{
+    position:fixed;
+    top: 0;
+    width:100%
+}
+.sticky + .content{
+    padding: 102px;
+}
 /* Main */
  .comtainer >  main{
      background: #0E7fff;
@@ -155,8 +198,8 @@ main > .applications{
     /* display: flex; */
     display: grid;
     margin: auto;
-    height: 70%;
-    width: 70%;
+    height: 100%;
+    width: 80%;
     /* margin: 10px  ; */
     padding: 40px 0 0 0;
     background-color: var(--main-color);
